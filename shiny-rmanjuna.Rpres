@@ -1,0 +1,55 @@
+shiny-rmanjuna
+========================================================
+author: 
+date: 
+
+First Slide
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
+
+- using mtcars dataset, we demonstrate the relation between 
+- The number of cylinders and /or the maximum Horse Power and we shall show you the corresponding average Miles/Gallon
+
+========================================================
+
+```{r}
+summary(mtcars)
+````
+
+========================================================
+Slide With Code
+```{r}
+## Exploratory box plot for 'mtcars' data
+# Load libraries
+  library(datasets)
+  # Create vectors for 'mpg' and 'cyl'
+  mpg <- mtcars$mpg
+  am <- mtcars$am
+  cyl<- mtcars$cyl
+  # Create factor vector from 'am' for labeling
+  amFactor <- factor(am, labels = c("Auto", "Manual"))
+  # Box plot comparing mpg for automatic versus manual transmissions
+  plot(cyl, mpg, xlab = "Transmission", ylab = "MPG")
+  title("MPG Comparison by Transmission Type")
+
+```
+
+
+========================================================
+Slide With Plot
+```{r, echo=FALSE}
+## Exploratory box plot for 'mtcars' data
+# Load libraries
+  library(datasets)
+  # Create vectors for 'mpg' and 'am'
+  mpg <- mtcars$mpg
+  am <- mtcars$am
+  cyl<- mtcars$cyl
+  # Create factor vector from 'am' for labeling
+  amFactor <- factor(am, labels = c("Auto", "Manual"))
+  # Box plot comparing mpg for automatic versus manual transmissions
+  plot(cyl, mpg, xlab = "Transmission", ylab = "MPG")
+  title("MPG Comparison by Transmission Type")
+```
